@@ -1,9 +1,7 @@
 import { createClient, RedisClientType } from "redis";
 import ZipLink from "../models/url.model";
-import serverConfig from "./server-config";
 import Core from "../common/index";
 
-const { REDIS_HOST, REDIS_PORT } = serverConfig;
 const { ApiError, Logger } = Core;
 
 class Queue {
@@ -60,7 +58,7 @@ class Queue {
 const connectRedis = async (): Promise<RedisClientType> => {
 
   const client: RedisClientType = createClient({
-  url: `rediss://${process.env.REDIS_PASSWORD}@${REDIS_HOST}:${REDIS_PORT}`,
+    url: process.env.REDIS_URL,
 });
 
 
