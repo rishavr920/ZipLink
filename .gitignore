@@ -1,0 +1,5 @@
+node_modules/
+ZipLink-Frontend/
+.env
+dist/
+uploads/

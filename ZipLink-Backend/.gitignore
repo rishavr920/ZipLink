@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Build files
+dist/
+tsconfig.tsbuildinfo
+
+# Environment
+.env
+
+# Uploads & Test results
+uploads/
+test_results/
+
+# Logs
+*.log
