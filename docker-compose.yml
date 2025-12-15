@@ -27,13 +27,12 @@ services:
       - redis
       - zookeeper
     environment:
-      PORT: 8080
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
-      LOG_LEVEL: info
-      ZK_SERVER: zookeeper:2181
-      MONGODB_URI: mongodb+srv://rishavr920:QN1GKqlpC6jKjcUF@ziplink.502zot7.mongodb.net/ziplink
-      BASE_URL: http://localhost:8080
+      # PORT: 8080
+      # REDIS_HOST: redis
+      # REDIS_PORT: 6379
+      # LOG_LEVEL: info
+      # ZK_SERVER: zookeeper:2181
+      # BASE_URL: http://localhost:8080
     restart: unless-stopped
 
   nginx:
