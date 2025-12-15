@@ -78,8 +78,7 @@ const connectRedis = async (): Promise<RedisClientType> => {
   try {
     await client.connect();
     Logger.info(
-      `✅ Connected to Redis at ${REDIS_HOST || "localhost"}:${
-        REDIS_PORT || 6379
+      `✅ Connected to Redis at ${process.env.REDIS_URL || "localhost"}
       }`
     );
     return client;
