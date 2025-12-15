@@ -58,12 +58,11 @@ class Queue {
 }
 
 const connectRedis = async (): Promise<RedisClientType> => {
+
   const client: RedisClientType = createClient({
-    socket: {
-      host: REDIS_HOST || "localhost",
-      port: Number(REDIS_PORT) || 6379,
-    },
-  });
+  url: `rediss://${process.env.REDIS_PASSWORD}@${REDIS_HOST}:${REDIS_PORT}`,
+});
+
 
   client.on("error", (err) => {
     const redisError = new ApiError(
