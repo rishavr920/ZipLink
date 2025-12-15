@@ -120,7 +120,7 @@ class URLController {
       }
 
       .form-container button {
-        background-color: #ca2424ff;
+        background-color: #4f46e5;
         color: white;
         padding: 0.75rem 1.5rem;
         border: none;
@@ -131,7 +131,7 @@ class URLController {
       }
 
       .form-container button:hover {
-        background-color: #d46325ff;
+        background-color: #3730a3;
       }
     </style>
   </head>
@@ -228,7 +228,7 @@ class URLController {
       }
 
       .form-container button {
-        background-color: #b44e1cff;
+        background-color: #4f46e5;
         color: white;
         padding: 0.75rem 1.5rem;
         border: none;
@@ -239,7 +239,7 @@ class URLController {
       }
 
       .form-container button:hover {
-        background-color: #d7562fff;
+        background-color: #3730a3;
       }
     </style>
   </head>

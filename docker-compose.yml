@@ -1,4 +1,3 @@
-
 version: "3.8"
 
 services:
@@ -22,19 +21,10 @@ services:
       - zookeeper-datalog:/datalog
     restart: unless-stopped
 
-  mongodb:
-    image: mongo
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongodb-data:/data/db
-    restart: unless-stopped
-
   backend:
     build: ./ZipLink-Backend
     depends_on:
       - redis
-      - mongodb
       - zookeeper
     environment:
       PORT: 8080
@@ -42,7 +32,7 @@ services:
       REDIS_PORT: 6379
       LOG_LEVEL: info
       ZK_SERVER: zookeeper:2181
-      MONGODB_URI: mongodb://mongodb:27017/ziplink
+      MONGODB_URI: mongodb+srv://rishavr920:QN1GKqlpC6jKjcUF@ziplink.502zot7.mongodb.net/ziplink
       BASE_URL: http://localhost:8080
     restart: unless-stopped
 
@@ -60,4 +50,3 @@ volumes:
   redis-data:
   zookeeper-data:
   zookeeper-datalog:
-  mongodb-data:
